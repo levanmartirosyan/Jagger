@@ -27,7 +27,7 @@
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "ჩინეთი",
-    "sectionCategory": 0
+    "sectionCategory": 1
   },
   {
     "id": 3,
@@ -43,5 +43,50 @@
     "insulation": "ქვა - ბამბა",
     "country": "საქართველო",
     "sectionCategory": 0
+  },
+  {
+    "id": 4,
+    "name": "მდფ კარი 081-Z N122-1 დფ კარი 081-Z N122-1",
+    "size": "218×80; 218×90",
+    "oldPrice": 100,
+    "price": 90,
+    "category": "კარი",
+    "material": "რკინა",
+    "image": "https://zodi.ge/wp-content/uploads/2024/12/02-350x437.png",
+    "description": "გიორგას მაგარი კარები",
+    "certificate": "100++",
+    "insulation": "ქვა - ბამბა",
+    "country": "საქართველო",
+    "sectionCategory": 0
+  },
+  {
+    "id": 5,
+    "name": "მდფ კარი 081-Z N122-1",
+    "size": "218×80; 218×90",
+    "oldPrice": 0,
+    "price": 90,
+    "category": "კარი",
+    "material": "რკინა",
+    "image": "https://zodi.ge/wp-content/uploads/2024/12/02-350x437.png",
+    "description": "გიორგას მაგარი კარები",
+    "certificate": "100++",
+    "insulation": "ქვა - ბამბა",
+    "country": "საქართველო",
+    "sectionCategory": 1
+  },
+  {
+    "id": 6,
+    "name": "მდფ კარი 081-Z N122-1",
+    "size": "218×80; 218×90",
+    "oldPrice": 0,
+    "price": 90,
+    "category": "კარი",
+    "material": "რკინა",
+    "image": "https://zodi.ge/wp-content/uploads/2024/12/02-350x437.png",
+    "description": "გიორგას მაგარი კარები",
+    "certificate": "100++",
+    "insulation": "ქვა - ბამბა",
+    "country": "საქართველო",
+    "sectionCategory": 1
   }
 ]

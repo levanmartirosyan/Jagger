@@ -1,0 +1,49 @@
+<section data-aos="fade-up" data-aos-duration="2000">
+  <div class="name">
+    <div class="icon">
+      <i class="fa-solid fa-percent"></i>
+    </div>
+    <h1>ფასდაკლებული</h1>
+  </div>
+  <div class="products">
+    @for (item of products; track $index) { @if (item.sectionCategory == 0) {
+    <div class="product">
+      <div class="top">
+        <div class="img" (click)="goToDetails(item.id, item.name)">
+          <img [src]="item.image" alt="" />
+        </div>
+        <div class="info">
+          <span>{{ item.name }}</span>
+          <span>{{ item.size }}</span>
+        </div>
+      </div>
+      @if (item.oldPrice !== 0 && item.oldPrice !== undefined ) {
+      <div class="sale">
+        <span
+          >-{{
+            ((item.oldPrice - item.price) / item.oldPrice) * 100
+              | number : "1.0-0"
+          }}%</span
+        >
+      </div>
+      }
+      <div class="prices">
+        <div>
+          <span
+            class="beforePrice"
+            [style.display]="
+              item.oldPrice == 0 ? 'none' : item.oldPrice ? 'block' : 'none'
+            "
+          >
+            {{ item.oldPrice == 0 ? "" : item.oldPrice + " ₾" }}</span
+          >
+          <span>{{ item.price + " ₾" }}</span>
+        </div>
+        <button (click)="goToDetails(item.id, item.name)">
+          <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+    </div>
+    } }
+  </div>
+</section>
