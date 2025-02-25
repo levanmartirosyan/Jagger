@@ -1,0 +1,78 @@
+<nav [class.hidden2]="isHidden">
+  <div class="container">
+    <div class="top">
+      <div class="contactInfo">
+        <div class="item">
+          <img src="/icons/phone-call.png" alt="" />
+          <span>+995 599-123-456</span>
+        </div>
+        <div class="item">
+          <img src="/icons/maps.png" alt="" />
+          <span>Tbilisi</span>
+        </div>
+        <div class="item">
+          <img src="/icons/email.png" alt="" />
+          <span>example&#64;gmail.com</span>
+        </div>
+      </div>
+      <div class="social">
+        <a href="#"><img src="/icons/facebook.png" alt="" /></a>
+        <a href="#"><img src="/icons/instagram.png" alt="" /></a>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="logo" routerLink="/" (click)="isMenuOpen = false">
+        <h1>JAGGER</h1>
+      </div>
+
+      <div class="pcMenu">
+        <span
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          მთავარი
+        </span>
+        <span routerLink="/products" routerLinkActive="active">პროდუქტები</span>
+        <span routerLink="/services" routerLinkActive="active"
+          >მომსახურება</span
+        >
+        <span routerLink="/about" routerLinkActive="active">ჩვენს შესახებ</span>
+        <span routerLink="/contact" routerLinkActive="active">კონტაქტი</span>
+      </div>
+
+      <div
+        class="burger"
+        [class.burgertoggle]="isMenuOpen"
+        (click)="toggleMenu()"
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobileMenu" [class.hidden]="!isMenuOpen">
+  <span
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    (click)="toggleMenu()"
+  >
+    მთავარი
+  </span>
+  <span routerLink="/products" routerLinkActive="active" (click)="toggleMenu()"
+    >პროდუქტები</span
+  >
+  <span routerLink="/services" routerLinkActive="active" (click)="toggleMenu()"
+    >მომსახურება</span
+  >
+  <span routerLink="/about" routerLinkActive="active" (click)="toggleMenu()"
+    >ჩვენს შესახებ</span
+  >
+  <span routerLink="/contact" routerLinkActive="active" (click)="toggleMenu()"
+    >კონტაქტი</span
+  >
+</div>

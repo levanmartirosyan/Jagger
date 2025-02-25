@@ -1,0 +1,52 @@
+<section>
+  <div class="left">
+    <div class="image">
+      <img
+        [src]="productDetails?.image"
+        alt=""
+        [style.transform]="'scale(' + zoomScale + ')'"
+        [style.transform-origin]="zoomOrigin.x + ' ' + zoomOrigin.y"
+        (mouseenter)="onMouseEnter($event)"
+        (mousemove)="onMouseMove($event)"
+        (mouseleave)="onMouseLeave()"
+      />
+    </div>
+  </div>
+  <div class="right">
+    <div class="top">
+      <div class="title">
+        <span>{{ productDetails.name }}</span>
+        <div class="prices">
+          <div>
+            <span
+              class="beforePrice"
+              [style.display]="
+                productDetails.oldPrice == 0
+                  ? 'none'
+                  : productDetails.oldPrice
+                  ? 'block'
+                  : 'none'
+              "
+            >
+              {{
+                productDetails.oldPrice == 0
+                  ? ""
+                  : productDetails.oldPrice + " ₾"
+              }}</span
+            >
+            <span>{{ productDetails.price + " ₾" }}</span>
+          </div>
+        </div>
+      </div>
+      <span>ID: {{ productDetails.id }}</span>
+    </div>
+    <div class="info">
+      <span>{{ productDetails.country }}</span>
+      <span>{{ productDetails.size }}</span>
+      <span>{{ productDetails.material }}</span>
+      <span>{{ productDetails.size }}</span>
+      <span>{{ productDetails.size }}</span>
+      <span>{{ productDetails.size }}</span>
+    </div>
+  </div>
+</section>

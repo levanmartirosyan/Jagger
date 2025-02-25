@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "მდფ კარი 2426-Z NQ05-7",
+    "size": "218×80 218×90",
+    "oldPrice": 300,
+    "price": 120,
+    "category": "კარი",
+    "material": "ხე",
+    "image": "https://zodi.ge/wp-content/uploads/2024/12/shablon2i-350x438.png",
+    "description": "გიორგას მაგარი კარები",
+    "certificate": "100++",
+    "insulation": "ქვა - ბამბა",
+    "country": "გერმანია",
+    "sectionCategory": 0
+  },
+  {
+    "id": 2,
+    "name": "მდფ კარი XLINE 8 maple",
+    "size": "ice 215×80",
+    "oldPrice": 0,
+    "price": 140,
+    "category": "კარი",
+    "material": "ხე",
+    "image": "https://zodi.ge/wp-content/uploads/2023/08/mdf-karebi-axali-4-350x438.png",
+    "description": "გიორგას მაგარი კარები",
+    "certificate": "100++",
+    "insulation": "ქვა - ბამბა",
+    "country": "ჩინეთი",
+    "sectionCategory": 0
+  },
+  {
+    "id": 3,
+    "name": "მდფ კარი 081-Z N122-1",
+    "size": "218×80; 218×90",
+    "oldPrice": 100,
+    "price": 90,
+    "category": "კარი",
+    "material": "რკინა",
+    "image": "https://zodi.ge/wp-content/uploads/2024/12/02-350x437.png",
+    "description": "გიორგას მაგარი კარები",
+    "certificate": "100++",
+    "insulation": "ქვა - ბამბა",
+    "country": "საქართველო",
+    "sectionCategory": 0
+  }
+]

@@ -1,0 +1,295 @@
+$primary: #17283a;
+$secondary: #0075ff;
+$white: #ffffff;
+$third: #e6e6e6;
+$fourth: #9b9b9b;
+$fifth: #940000;
+
+.accordion {
+  width: 100%;
+  max-height: 70px;
+  background-color: $third;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  .header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 20px;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    .search {
+      width: 100%;
+      position: relative;
+      margin-bottom: 30px;
+      input {
+        width: 100%;
+        height: 42px;
+        border: 0;
+        background-color: $white;
+        border-radius: 25px;
+        outline: none;
+        padding: 0 50px 0 20px;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+        &:focus {
+          border: 1px solid $primary;
+        }
+        &::placeholder {
+          font-family: "boxo" !important;
+          font-size: 15px;
+        }
+        &::-webkit-input-placeholder {
+          font-family: "boxo" !important;
+        }
+        &:-moz-placeholder {
+          font-family: "boxo" !important;
+        }
+        &::-moz-placeholder {
+          font-family: "boxo" !important;
+        }
+        &:-ms-input-placeholder {
+          font-family: "boxo" !important;
+        }
+      }
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-results-button,
+      input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+      }
+      i {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+    }
+  }
+  &.active {
+    height: 100%;
+    max-height: 500px;
+    .header {
+      position: relative;
+      i {
+        transform: rotateX(180deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $primary;
+        border-radius: 5px;
+      }
+    }
+    .content {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
+
+section {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  .filter {
+    max-width: 235px;
+    width: 100%;
+    height: 350px;
+    border: 1px solid $primary;
+    border-radius: 8px;
+  }
+  .products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    .product {
+      width: 225px;
+      height: 410px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
+      padding-bottom: 5px;
+      position: relative;
+      .top {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .img {
+          width: 100%;
+          height: 280px;
+          overflow: hidden;
+          cursor: pointer;
+          border-radius: 12px;
+          img {
+            width: 225px;
+            height: 280px;
+            border-radius: 12px 12px 0 0;
+            transition: 0.3s ease;
+          }
+        }
+        .info {
+          width: 100%;
+          padding: 0 5px;
+          line-height: 25px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          span {
+            font-weight: bold;
+            font-size: 15px;
+            &:last-of-type {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .sale {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ff8559;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateZ(-45deg);
+        span {
+          color: $white;
+          font-weight: bold;
+          font-size: 13px;
+        }
+      }
+      .prices {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        justify-content: space-between;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          span {
+            font-weight: bold;
+            font-size: 18px;
+            &:first-of-type {
+              font-size: 14px;
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                width: 120%;
+                height: 1px;
+                background-color: $fifth;
+                border-radius: 5px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
+        button {
+          width: 40px;
+          height: 40px;
+          border: 0;
+          background-color: $primary;
+          border-radius: 12px;
+          cursor: pointer;
+          i {
+            font-size: 16px;
+            color: $white;
+          }
+        }
+      }
+      &:hover {
+        .img {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  .noProduct {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    .products {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    .filter {
+      max-width: 100%;
+      width: 100%;
+      .dropdown {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    .products {
+      justify-content: center;
+      .product {
+        width: 100%;
+        height: auto;
+        .top {
+          .img {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/ngx-toastr/toastr.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "boxo";
+  src: url("/fonts/bpg-boxo-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sawah";
+  src: url("/fonts/Sawah.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  font-family: "boxo", sans-serif !important;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 12px;
+  background: #d3d3d3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8559;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 12px;
+}

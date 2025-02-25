@@ -1,0 +1,64 @@
+<div class="accordion" [class.active]="openAccordionMenu">
+  <div class="header" (click)="toggleAccordion()">
+    <span>ფილტრაცია</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="content">
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="search"
+        placeholder="ძიება..."
+        [(ngModel)]="keyword"
+        (keyup)="searchProduct()"
+      />
+    </div>
+  </div>
+</div>
+<section>
+  <div class="products">
+    @for (item of products; track $index) {
+    <div class="product">
+      <div class="top">
+        <div class="img" (click)="goToDetails(item.id, item.name)">
+          <img [src]="item.image" alt="" />
+        </div>
+        <div class="info">
+          <span>{{ item.name }}</span>
+          <span>{{ item.size }}</span>
+        </div>
+      </div>
+      @if (item.oldPrice !== 0 && item.oldPrice !== undefined ) {
+      <div class="sale">
+        <span
+          >-{{
+            ((item.oldPrice - item.price) / item.oldPrice) * 100
+              | number : "1.0-0"
+          }}%</span
+        >
+      </div>
+      }
+      <div class="prices">
+        <div>
+          <span
+            class="beforePrice"
+            [style.display]="
+              item.oldPrice == 0 ? 'none' : item.oldPrice ? 'block' : 'none'
+            "
+          >
+            {{ item.oldPrice == 0 ? "" : item.oldPrice + " ₾" }}</span
+          >
+          <span>{{ item.price + " ₾" }}</span>
+        </div>
+        <button (click)="goToDetails(item.id, item.name)">
+          <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+    </div>
+    } @if(products.length <= 0) {
+    <div class="noProduct">
+      <span>პროდუქტი ვერ მოიძებნა</span>
+    </div>
+    }
+  </div>
+</section>

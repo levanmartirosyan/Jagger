@@ -1,0 +1,26 @@
+<section>
+  <div class="carousel">
+    <div
+      class="btns"
+      (mouseenter)="pauseAutoSlide()"
+      (mouseleave)="resumeAutoSlide()"
+    >
+      <i class="fa-solid fa-chevron-left" (click)="prevImage()"></i>
+      <i class="fa-solid fa-chevron-right" (click)="nextImage()"></i>
+    </div>
+    <div
+      class="image-container"
+      (mouseenter)="pauseAutoSlide()"
+      (mouseleave)="resumeAutoSlide()"
+    >
+      <div
+        class="image-track"
+        [style.transform]="'translateX(' + -currentIndex * 100 + '%)'"
+      >
+        @for (img of imageList; track $index) {
+        <img [src]="img" alt="" />
+        }
+      </div>
+    </div>
+  </div>
+</section>
