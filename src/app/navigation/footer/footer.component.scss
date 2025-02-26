@@ -8,7 +8,7 @@ $six: #940000;
 footer {
   width: 100%;
   border: 1px solid $fifth;
-  background-color: #e0e0e0;
+  background-color: #eeeeee;
   margin-top: 50px;
   .container {
     max-width: 1280px;
@@ -80,6 +80,23 @@ footer {
               transition: 0.3s ease;
               &:hover {
                 color: $primary;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: $fourth;
+              display: flex;
+              align-items: center;
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              span {
+                font-size: 14px;
+                transition: 0.3s ease;
+                &:hover {
+                  color: $primary;
+                }
               }
             }
           }
