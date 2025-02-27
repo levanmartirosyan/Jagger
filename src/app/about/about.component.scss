@@ -1,0 +1,96 @@
+$primary: #ff8559;
+$secondary: #facab9;
+$third: #ffffff;
+$fourth: #000000;
+$fifth: #cccfd4;
+$six: #940000;
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $primary;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  h1 {
+    color: $fourth;
+    padding: 16px 24px;
+    background-color: $third;
+    border-radius: 8px;
+  }
+  .images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    img {
+      width: 45%;
+      height: 100%;
+      flex: 1;
+      border-radius: 3px;
+    }
+  }
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .card {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: $third;
+      gap: 20px;
+      border-radius: 8px;
+      h1 {
+        color: $fourth;
+        padding: 0;
+        background-color: transparent;
+      }
+      p {
+        text-align: start;
+        font-weight: 500;
+        line-height: 25px;
+        em {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        li {
+          font-weight: 500;
+          img {
+            width: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 465px) {
+  section {
+    .cards {
+      .card {
+        ul {
+          li {
+            span {
+              padding-left: 16.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

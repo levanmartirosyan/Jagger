@@ -24,11 +24,6 @@ export const routes: Routes = [
     title: 'Jagger - დეტალები',
   },
   {
-    path: 'services',
-    component: ServiceComponent,
-    title: 'Jagger - მომსახურება',
-  },
-  {
     path: 'about',
     component: AboutComponent,
     title: 'Jagger - ჩვენს შესახებ',
