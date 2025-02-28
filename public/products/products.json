@@ -12,7 +12,15 @@
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "გერმანია",
-    "sectionCategory": 0
+    "stock": true,
+    "sectionCategory": 0,
+    "additionalInfo": {
+      "frtisSisqe": "70მმ",
+      "charchosSisqe": " 100მმ",
+      "frtisLitonisSisqe": "1.0მმ",
+      "charchosLitonisSisqe": "1.2მმ",
+      "lockQuantity": 1
+    }
   },
   {
     "id": 2,
@@ -27,7 +35,15 @@
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "ჩინეთი",
-    "sectionCategory": 1
+    "stock": true,
+    "sectionCategory": 1,
+    "additionalInfo": {
+      "frtisSisqe": "70მმ",
+      "charchosSisqe": " 100მმ",
+      "frtisLitonisSisqe": "1.0მმ",
+      "charchosLitonisSisqe": "1.2მმ",
+      "lockQuantity": 1
+    }
   },
   {
     "id": 3,
@@ -38,11 +54,19 @@
     "category": "კარი",
     "material": "რკინა",
     "image": "https://zodi.ge/wp-content/uploads/2024/12/02-350x437.png",
-    "description": "გიორგას მაგარი კარები",
+    "description": "გიორგას მაგარი კარები გიორგას მაგარი კარები გიორგას მაგარი კარები გიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას მაგარი კარებიგიორგას",
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "საქართველო",
-    "sectionCategory": 0
+    "stock": false,
+    "sectionCategory": 0,
+    "additionalInfo": {
+      "frtisSisqe": "70მმ",
+      "charchosSisqe": " 100მმ",
+      "frtisLitonisSisqe": "1.0მმ",
+      "charchosLitonisSisqe": "1.2მმ",
+      "lockQuantity": 1
+    }
   },
   {
     "id": 4,
@@ -57,7 +81,15 @@
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "საქართველო",
-    "sectionCategory": 0
+    "stock": false,
+    "sectionCategory": 0,
+    "additionalInfo": {
+      "frtisSisqe": "70მმ",
+      "charchosSisqe": " 100მმ",
+      "frtisLitonisSisqe": "1.0მმ",
+      "charchosLitonisSisqe": "1.2მმ",
+      "lockQuantity": 1
+    }
   },
   {
     "id": 5,
@@ -72,7 +104,15 @@
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "საქართველო",
-    "sectionCategory": 1
+    "stock": true,
+    "sectionCategory": 1,
+    "additionalInfo": {
+      "frtisSisqe": "70მმ",
+      "charchosSisqe": " 100მმ",
+      "frtisLitonisSisqe": "1.0მმ",
+      "charchosLitonisSisqe": "1.2მმ",
+      "lockQuantity": 1
+    }
   },
   {
     "id": 6,
@@ -87,6 +127,14 @@
     "certificate": "100++",
     "insulation": "ქვა - ბამბა",
     "country": "საქართველო",
-    "sectionCategory": 1
+    "stock": false,
+    "sectionCategory": 1,
+    "additionalInfo": {
+      "frtisSisqe": "70მმ",
+      "charchosSisqe": " 100მმ",
+      "frtisLitonisSisqe": "1.0მმ",
+      "charchosLitonisSisqe": "1.2მმ",
+      "lockQuantity": 1
+    }
   }
 ]

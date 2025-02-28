@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
   constructor(
     private actR: ActivatedRoute,
-    private productService: ProductsService
+    private productService: ProductsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -29,6 +31,11 @@ export class DetailsComponent implements OnInit {
     this.actR.queryParams.subscribe((params: any) => {
       this.queryId = params.productId;
 
+      const storedProduct = sessionStorage.getItem(`product_${this.queryId}`);
+      if (storedProduct) {
+        this.productDetails = JSON.parse(storedProduct);
+      }
+
       this.productService.getProducts().subscribe({
         next: (data: any) => {
           console.log('All products:', data);
@@ -38,6 +45,14 @@ export class DetailsComponent implements OnInit {
             (product: any) =>
               product.id.toString().trim() === this.queryId.trim()
           );
+
+          if (this.productDetails) {
+            sessionStorage.setItem(
+              `product_${this.queryId}`,
+              JSON.stringify(this.productDetails)
+            );
+          }
+
           console.log(this.productDetails);
         },
         error: (error: any) => {
@@ -67,5 +82,19 @@ export class DetailsComponent implements OnInit {
   onMouseLeave() {
     this.zoomScale = 1;
     this.zoomOrigin = { x: '50%', y: '50%' };
+  }
+
+  public addInfo: number = 0;
+
+  toggleAddInfo(id: number) {
+    this.addInfo = id;
+  }
+
+  goToDetails(id: any, name: string) {
+    this.router.navigate([`products/details/${name}`], {
+      queryParams: {
+        productId: JSON.stringify(id),
+      },
+    });
   }
 }
